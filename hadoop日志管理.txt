@@ -1,0 +1,8 @@
+开启:export HADOOP_ROOT_LOGGER=DEBUG.console
+关闭:export HADOOP_ROOT_LOGGER=INFO.console
+
+Hadoop命令格式：
+hadoop daemonlog -getlevel <host:port> <name>
+hadoop daemonlog --setlevel <host:port> <name> <level>
+<name>为类名，如：TaskTracker
+<level>为日志级别，如：debug和info等

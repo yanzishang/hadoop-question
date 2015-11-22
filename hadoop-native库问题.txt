@@ -1,0 +1,11 @@
+WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+
+一，通常编译好的hadoop库是在lib中，如果你不想编译，可以用lib/native里面的预编译库，然后把native的库移动到lib文件夹中。
+
+cp hadoop-2.6.0/lib/native/* hadoop-2.6.0/lib/
+
+二，加入系统变量
+export HADOOP_COMMON_LIB_NATIVE_DIR={$HADOOP_HOME}/lib/native
+export HADOOP_OPTS="-Djava.library.path={$HADOOP_HOME}/lib"
+export HADOOP_ROOT_LOGGER=DEBUG,console
